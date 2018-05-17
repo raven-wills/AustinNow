@@ -159,7 +159,7 @@
         bigSectionsDestination: null,
 
         //Accessibility
-        keyboardScrolling: true,
+        keyboardScrolling: false,
         animateAnchor: true,
         recordHistory: true,
 
@@ -217,13 +217,13 @@
     var isWindowFocused = true;
     var lastScrolledDestiny;
     var lastScrolledSlide;
-    var canScroll = true;
+    var canScroll = false;
     var scrollings = [];
     var controlPressed;
     var startingSection;
     var isScrollAllowed = {};
-    isScrollAllowed.m = { up: true, down: true, left: true, right: true };
-    isScrollAllowed.k = $.extend(true, {}, isScrollAllowed.m);
+    isScrollAllowed.m = { up: false, down: false, left: true, right: true };
+    isScrollAllowed.k = $.extend(false, {}, isScrollAllowed.m);
     var MSPointer = getMSPointer();
     var events = {
       touchmove: "ontouchmove" in window ? "touchmove" : MSPointer.move,
@@ -365,7 +365,7 @@
         setIsScrollAllowed(value, "all", "m");
 
         if (value) {
-          setMouseWheelScrolling(true);
+          setMouseWheelScrolling(false);
           addTouchHandler();
         } else {
           setMouseWheelScrolling(false);
@@ -402,7 +402,7 @@
       }
 
       if (prev.length) {
-        scrollPage(prev, null, true);
+        scrollPage(prev, null, false);
       }
     }
 

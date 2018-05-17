@@ -71,13 +71,13 @@ $.ajax({
 
   var i = 0;
   $("#FC").html(
-    "<p>" +
+    '<p class=news>"' +
       "<a href='" +
       newsAPI.articles[i].url +
       "' id='newsArticles'>" +
       newsAPI.articles[i].title +
       "</a>" +
-      "</p>"
+      '"</p>'
   );
 
   setInterval(function() {
@@ -86,7 +86,7 @@ $.ajax({
       i = 0;
     }
     $("#FC").html(
-      "<p>" +
+      "<p class=news>" +
         "<a href='" +
         newsAPI.articles[i].url +
         "' id='newsArticles'>" +

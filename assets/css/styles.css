@@ -63,7 +63,7 @@ body {
 .container {
   max-width: 100% !important;
   text-align: center;
-  line-height: 16.6vh;
+  line-height: 8vh;
 }
 
 .mainInfo {
@@ -108,7 +108,7 @@ body {
 
 #newsArticles {
   color: white;
-  font-size: 22px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -136,7 +136,7 @@ body {
   max-width: 100%;
   height: 5px;
   z-index: 999;
-  overflow: hidden;
+  overflow: scroll;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -212,7 +212,7 @@ td {
 
 .movieTable {
   width: 90%;
-  height: 65vh;
+  /* height: vh; */
 }
 
 .movieTitle {

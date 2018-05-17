@@ -28,7 +28,7 @@ function displayTime(string) {
         ":" +
         minutes +
         "</span><span class='seconds'>" +
-        seconds +
+        // seconds +
         "</span><span class='amPm'>" +
         "" +
         amPm +
